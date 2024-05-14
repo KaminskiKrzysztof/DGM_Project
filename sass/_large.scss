@@ -1,5 +1,13 @@
 @media (min-width: 992px) {
-	.header {
+	
+    h1.company-name{
+        font: 6rem;
+    }
+    
+    
+    
+    
+    .header {
 		grid-template-rows: auto repeat(2, 1fr);
 
 		&__text {
@@ -14,6 +22,8 @@
 		&__img {
 			grid-row: 1/4;
 			grid-column: 2/3;
+            background-image: url(../img/btc-big.jpg);
+            
 		}
 
 		&__arrow {
@@ -37,21 +47,18 @@
 				border-radius: 50%;
 				animation: pulse 2s infinite;
 			}
-
-			&__arrow-icon {
-			}
 		}
 
 		&__arrow-icon {
 			width: 50px;
 		}
 
-		&_bg-icon-one {
+		&__bg-icon-one {
 			left: 6em;
 			bottom: 8em;
 			width: 10%;
 		}
-		&_bg-icon-two {
+		&__bg-icon-two {
 			display: block;
 			top: 10em;
 			left: 35%;
@@ -72,10 +79,39 @@
 
 		&__link {
 			color: $white;
+
+            &::before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 100%;
+                border: 1px solid $gold;
+                opacity: 0;
+    
+                
+            }
+            &:hover::before {
+                animation: pulse 1s;
+            }
 		}
 	}
 
 	.hamburger {
 		display: none;
 	}
+}
+
+
+
+
+@media (min-width: 1200px){
+    .header{
+        &__text{
+            p{
+                font-size: 2.2rem;
+            }
+        }
+    }
 }
