@@ -469,7 +469,9 @@ h1.company-name {
 }
 
 .footer {
-	padding: 3em 1em;
+	display: flex;
+	justify-content: space-between;
+	padding: 3em 3em;
 	border-top: 1px solid $darker;
 	text-align: center;
 }
